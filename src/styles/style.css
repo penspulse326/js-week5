@@ -451,3 +451,7 @@ body {
     margin-top: 0px;
   }
 }
+
+.alert-message {
+  display: none;
+}
