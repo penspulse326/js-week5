@@ -35,6 +35,41 @@ const data = [
     price: 1765,
     rate: 7,
   },
+  {
+    id: 3,
+    name: "綠島自由行套裝行程",
+    imgUrl:
+      "https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_1.png?raw=true",
+    area: "高雄",
+    description: "嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合。",
+    group: 87,
+    price: 1400,
+    rate: 10,
+  },
+  {
+    id: 4,
+    name: "清境高空觀景步道",
+    imgUrl:
+      "https://images.unsplash.com/photo-1535530992830-e25d07cfa780?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+    area: "台北",
+    description:
+      "清境農場青青草原數十公頃碧草，這些景觀豐沛了清境觀景步道的風格，也涵養它無可取代的特色。",
+    group: 99,
+    price: 240,
+    rate: 2,
+  },
+  {
+    id: 5,
+    name: "山林悠遊套票",
+    imgUrl:
+      "https://images.unsplash.com/photo-1535530992830-e25d07cfa780?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+    area: "台中",
+    description:
+      "山林悠遊套票，結合南投清境高空步道、雙龍瀑布七彩吊橋、瑞龍瀑布園區之熱門景點。",
+    group: 20,
+    price: 1765,
+    rate: 7,
+  },
 ];
 
 export default data;

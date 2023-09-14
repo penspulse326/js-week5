@@ -11,3 +11,10 @@ export const form = {
 
 // 新增按鈕
 export const addButton = document.querySelector(".addTicket-btn");
+
+// 套票列表 ul
+export const ticketList = document.querySelector(".ticketCard-area");
+
+// 地區篩選
+export const regionSearch = document.querySelector(".regionSearch");
+export const searchNum = document.querySelector("#searchResult-text");

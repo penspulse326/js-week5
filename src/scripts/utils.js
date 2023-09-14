@@ -1,3 +1,5 @@
+import card from "./card.js";
+
 // 驗證表單 // 回傳 boolean 告知是否通過
 export function validateForm(form) {
   // 是否觸發警告
@@ -48,4 +50,15 @@ export function validateForm(form) {
   }
 
   return validateFlag;
+}
+
+// 顯示列表
+export function showList(arr) {
+  let result = "";
+
+  arr.forEach((item) => {
+    result += card(item);
+  });
+
+  return result;
 }

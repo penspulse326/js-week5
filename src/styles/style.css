@@ -455,3 +455,7 @@ body {
 .alert-message {
   display: none;
 }
+
+ul {
+  list-style-type: none;
+}
