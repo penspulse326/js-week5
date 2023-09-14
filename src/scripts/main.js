@@ -16,11 +16,11 @@ addButton.addEventListener("click", () => {
   if (!result) {
     const newItem = {};
 
-    Object.entries(form).forEach((item) => {
-      if (item[0] === "rate" || item[0] === "group" || item[0] === "price") {
-        newItem[item[0]] = parseInt(item[1].value);
+    Object.entries(form).forEach(([key, value]) => {
+      if (key === "rate" || key === "group" || key === "price") {
+        newItem[key] = parseInt(value.value);
       } else {
-        newItem[item[0]] = item[1].value;
+        newItem[key] = value.value;
       }
     });
 
