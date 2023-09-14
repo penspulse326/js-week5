@@ -22,11 +22,8 @@ export function validateForm(form) {
   const alertElement = (key) => form[key].parentElement.nextElementSibling;
 
   // 驗證每個欄位是否有輸入問題 沒有就觸發警告 flag 並且讓代表警告的 HTML 元素顯示
-  Object.entries(form).forEach((item) => {
-    const key = item[0];
-    const value = item[1].value;
-
-    if (!value) {
+  Object.entries(form).forEach(([key, value]) => {
+    if (!value.value) {
       validateFlag = true;
       alertElement(key).style.display = "flex";
     } else {
