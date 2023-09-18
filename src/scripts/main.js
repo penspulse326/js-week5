@@ -1,4 +1,4 @@
-import data from "./data.js";
+import fetchData from "./fetchData.js";
 import {
   form,
   addButton,
@@ -7,6 +7,9 @@ import {
   searchNum,
 } from "./elements.js";
 import { validateForm, showList } from "./utils.js";
+
+// 把原本的 import 的 data 變數改為此處宣告，等待初始化後把 fetch 到的資料存進來
+const data = [];
 
 // 新增套票
 addButton.addEventListener("click", () => {
@@ -38,7 +41,11 @@ addButton.addEventListener("click", () => {
 
 // 顯示套票
 // 初始化 預設顯示三筆
-ticketList.innerHTML = showList(data.slice(0, 3));
+fetchData().then((res) => {
+  res.forEach((item) => data.push(item));
+  ticketList.innerHTML = showList(data.slice(0, 3));
+});
+
 searchNum.textContent = "";
 
 // 地區篩選
