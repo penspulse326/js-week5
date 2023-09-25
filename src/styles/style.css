@@ -240,16 +240,33 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: flex-start;
   max-width: 920px;
   margin: 0 auto;
   padding: 50px 0;
 }
 
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 .search-area p {
   color: #818a91;
+}
+
+.chart {
+  margin: 0 auto;
+}
+
+.chart .c3-chart-arcs-title,
+.chart .c3-legend-item-event {
+  font-size: 14px;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -261,6 +278,10 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+
+  .search-wrapper {
+    flex-direction: column;
   }
 }
 
