@@ -1,7 +1,11 @@
-export default function showChart(data, chart) {
-  chart === null || chart === void 0 ? void 0 : chart.destroy();
-  const newData = {};
+import { ApiDataType } from "./allTypes.js";
+
+export default function showChart(data: ApiDataType[], chart: any) {
+  chart?.destroy();
+
+  const newData: { [key: string]: any } = {};
   const order = ["台北", "台中", "高雄"];
+
   data.forEach((item) => {
     if (newData[item.area]) {
       ++newData[item.area];
@@ -9,13 +13,15 @@ export default function showChart(data, chart) {
       newData[item.area] = 1;
     }
   });
+
   //@ts-ignore
   return c3.generate({
-    bindto: ".chart",
+    bindto: ".chart", // HTML 元素綁定
     size: {
       height: 200,
       width: 200,
     },
+
     data: {
       labels: false,
       type: "donut",
@@ -28,6 +34,7 @@ export default function showChart(data, chart) {
         高雄: "#E68618",
       },
     },
+
     donut: {
       title: "套票地區比重",
       width: 12,
