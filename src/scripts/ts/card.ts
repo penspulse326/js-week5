@@ -1,5 +1,7 @@
-export default function Card(item) {
-    return `
+import { ApiDataType } from "./allTypes.js";
+
+export default function Card(item: ApiDataType) {
+  return `
         <li class="ticketCard">
           <div class="ticketCard-img">
             <a href="#">
